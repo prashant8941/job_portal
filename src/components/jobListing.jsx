@@ -8,6 +8,7 @@ import { set } from 'mongoose';
 
 
 const JobListing = () => {
+    // we are using useContext to get the jobs data from AppContext
   const { isSearched, searchFilter  , setSearchFilter , jobs} = useContext(AppContext);
   const[showFilter, setShowFilter] =useState(true);  
 
