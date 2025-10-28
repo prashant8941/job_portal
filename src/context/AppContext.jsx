@@ -12,6 +12,8 @@ export const AppContextProvider = (props) => {
   const [isSearched, setIsSearched] = useState(false);
   const[jobs , setJobs] =useState([]);
 
+  const[showRecruiterLogin , setShowRecruiterLogin] = useState(false)
+
   // function to fetch the jobs data from backend based on search filter
   const fetchJobs = async () => {
     setJobs(jobsData);
@@ -26,7 +28,8 @@ export const AppContextProvider = (props) => {
     const value= {
       searchFilter, setSearchFilter, 
       isSearched, setIsSearched,
-      jobs , setJobs
+      jobs , setJobs, 
+      showRecruiterLogin, setShowRecruiterLogin
 
 
 
