@@ -5,6 +5,13 @@ import ApplyJob from './pages/ApplyJob.jsx'
 import Applications from './pages/Applications.jsx'   
 import RecruiterLogin from './components/RecruiterLogin.jsx'
 import { AppContext } from './context/AppContext.jsx'
+import ManageJob from './pages/ManageJob.jsx'
+import ViewApplications from './pages/ViewApplications.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import AddJob from './pages/AddJob.jsx'
+import 'quill/dist/quill.snow.css';
+
+
 
 
 
@@ -14,10 +21,15 @@ const App = () => {
   return (
     <div>
      {showRecruiterLogin &&  <RecruiterLogin/> }
-              <Routes>
+      <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/apply-job/:id" element={<ApplyJob/>} />
         <Route path="/applications" element={<Applications />} />
+        <Route path="/dashboard" element={<Dashboard/>}>
+        <Route path="add-job" element={<AddJob/>}/>
+        <Route path="manage-jobs" element={<ManageJob/>}/>
+        <Route path="view-applications" element={<ViewApplications/>}/>
+        </Route>
       </Routes>
       
       

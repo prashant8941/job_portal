@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { AppContext } from '../context/AppContext';
 import { assets, JobCategories, JobLocations  } from '../assets/assets';
 import JobCard from './JobCard';
-import { set } from 'mongoose';
+// import { set } from 'mongoose';
 
 
 
